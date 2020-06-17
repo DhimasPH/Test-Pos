@@ -1,0 +1,23 @@
+body{
+    background-color: #e5ecec;
+}
+.content{
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.box-food{
+    margin-top:10px;
+    text-align: center;
+}
+
+.box-cart{
+    margin-top:10px;
+}
+.borderless td, .borderless th {
+    border: none;
+}
+.list-food a{
+    color:black;
+    text-decoration: none;
+}

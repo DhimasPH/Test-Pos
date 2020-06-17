@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Pos</title>
+    <link href="./assets/css/bootstrap.css" rel="stylesheet">
+    <link href="./assets/css/style.css" rel="stylesheet">
+    <script src="./assets/js/jquery.min.js"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <div class="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <div class="row list-food">
+                        
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="card box-cart">
+                        <div class="card-header text-center">
+                          <h4>New Customer</h4>
+                        </div>
+                        <div class="card-body">
+                            <div class="text-center mb-4">Dine In</div>
+                            <div class="table-responsive mb-4">
+                                <table class="table table-sm borderless">
+                                    <tbody id="detail-cart">
+                                        <tr>
+                                            <td>Sub Total : </td>
+                                            <td></td>
+                                            <td>Rp 0</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total : </td>
+                                            <td></td>
+                                            <td>Rp 0</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                          <button class="btn btn-light btn-block clear-sale">Clear Sale</button>
+                        </div>
+                        <div class="card-footer">
+                            <div class="row">
+                                <div class="col-6"><button class="btn btn-light btn-block float-left save"> Save Bill</button></div>
+                                <div class="col-6"><button class="btn btn-light btn-block float-right print"> Print Bill</button></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary btn-lg btn-block mt-3 charge">Charge Rp <span id="charge-total">0</span></button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div class="modal fade" id="modal-charge" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Charge</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            <div class="modal-body">
+                <div class="form-group">
+                    <label>Enter the total payment money</label>
+                    <input type="number" min="0" class="form-control calculate" placeholder="0">
+                </div>
+                <div class="form-group">
+                    <label>Total refunded : </label>
+                    <input type="text" readonly class="form-control refunded" value="0">
+                </div>
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-primary btn-block save" data-dismiss="modal">Save</button>
+            </div>
+        </div>
+        </div>
+    </div>
+    <div class="to-print" style="display: none;">
+        <table style="width:100%; text-align: left;">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Quantity</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="detail-print">     
+            </tbody>
+            <tfoot id="detail-print2" style="font-weight: bold;">     
+            </tfoot>       
+          </table>
+    </div>
+    <script src="./assets/js/index.js"></script>
+</body>
+</html>
